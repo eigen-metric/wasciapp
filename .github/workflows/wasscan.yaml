@@ -14,7 +14,7 @@ jobs:
       - name: Build + Run PetStore
         run: |
           docker pull swaggerapi/petstore
-          docker run -d -e SWAGGER_URL=http://petstore:8080 -e SWAGGER_PATH=/v2 --name petstore swaggerapi/petstore
+          docker run -d -p 8080:8080 -e SWAGGER_URL=http://petstore:8080 -e SWAGGER_PATH=/v2 --name petstore swaggerapi/petstore
           ls $(pwd)
       - name: Run WAS
         run: |
