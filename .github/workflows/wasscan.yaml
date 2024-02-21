@@ -15,6 +15,7 @@ jobs:
         run: |
           docker pull swaggerapi/petstore
           docker run -d -e SWAGGER_URL=http://petstore:8080 -e SWAGGER_PATH=/v2 --name petstore swaggerapi/petstore
+          ls $(pwd)
       - name: Run WAS
         run: |
           docker pull tenable/was-scanner:latest
