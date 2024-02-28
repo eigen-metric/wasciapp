@@ -1,4 +1,4 @@
-name: CI WAS Scan
+name: CICD WAS Scan
 on:
   push:
     branches:
